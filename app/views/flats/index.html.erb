@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <h2 class="col-12">All our Flats</h2>
+    <p class="col-12">All <%= @flats.count %> flats.</p>
+    <% @flats.each do |f| %>
+    <div class="col-4">
+      <div class="card my-2" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title"> <strong><%= f.name %></strong></h3>
+            <p class="card-text"><%= f.address %></p>
+            <h5>
+              <strong>
+                <i class="fas fa-user-friends"> </i> <%= f.number_of_guests %>
+                <i class="fas fa-euro-sign ml-5"></i> <%= f.price_per_night %>
+              </strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <%= link_to 'More info', f , class: 'card-link'%>
+            <%= link_to 'Edit', edit_flat_path(f) , class: 'card-link'%>
+            <%= link_to 'Remove', f , method: :delete, class: 'card-link'%>
+          </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+

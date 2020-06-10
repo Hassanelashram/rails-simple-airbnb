@@ -1,0 +1,41 @@
+<header style="background-image: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200');">
+
+</header>
+
+<div class="container show-container">
+  <div class="row ">
+    <div class="col-1"></div>
+    <div class="col-8 mx-auto">
+      <div class="card bg-light p-3">
+        <h2><%= @flat.name %></h2>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="card bg-light p-3 my-3">
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="col mx-auto">
+      <div class="card bg-light p-3">
+        <p>Book this place!</p>
+        <input class="form-control" type="text">
+        <input class="form-control my-2" type="text">
+        <a href="" class="btn btn-success">Book</a>
+      </div>
+      <div class="card bg-light p-3 my-3">
+        <h2>Details</h2>
+        <strong>
+          <i class="fas fa-user-friends"> </i> <%= @flat.number_of_guests %>
+          <i class="fas fa-euro-sign ml-5"></i> <%= @flat.price_per_night %>
+        </strong>
+      </div>
+      <div class="card bg-light p-3">
+        <h2>Follow</h2>
+        <ul style="list-style: none">
+          <li class="d-inline"><i class=" fab fa-facebook-square"></i></li>
+          <li class="d-inline"><i class="fab fa-instagram-square"></i></li>
+          <li class="d-inline"><i class="fab fa-twitter-square"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
